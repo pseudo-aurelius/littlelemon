@@ -25,8 +25,8 @@ struct Onboarding: View {
             VStack {
                 
                 NavigationLink("", destination: Home(), isActive: $isLoggedIn).onAppear() {
-                    var loginStatus: String = UserDefaults.standard.string(forKey: keyLoggedIn) ?? "false"
-                    var alreadyLoggedOn: Bool = Bool(loginStatus) ?? false
+                    let loginStatus: String = UserDefaults.standard.string(forKey: keyLoggedIn) ?? "false"
+                    let alreadyLoggedOn: Bool = Bool(loginStatus) ?? false
                     
                     if (alreadyLoggedOn) {
                         isLoggedIn = true;
