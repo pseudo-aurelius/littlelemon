@@ -14,6 +14,11 @@
 		470BF7352C5D4E430011EF47 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BF7342C5D4E430011EF47 /* Home.swift */; };
 		470BF7372C5D4E7E0011EF47 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BF7362C5D4E7E0011EF47 /* Menu.swift */; };
 		470BF7392C5D53100011EF47 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BF7382C5D53100011EF47 /* UserProfile.swift */; };
+		47DBF70C2C5D8D7F003CEC02 /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DBF70A2C5D8D7E003CEC02 /* FetchedObjects.swift */; };
+		47DBF70D2C5D8D7F003CEC02 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DBF70B2C5D8D7F003CEC02 /* Persistence.swift */; };
+		47DBF70F2C5D8DFA003CEC02 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DBF70E2C5D8DFA003CEC02 /* MenuList.swift */; };
+		47DBF7112C5D8E0B003CEC02 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DBF7102C5D8E0B003CEC02 /* MenuItem.swift */; };
+		47DBF7142C5D9446003CEC02 /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47DBF7122C5D9446003CEC02 /* ExampleDatabase.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		470BF7342C5D4E430011EF47 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		470BF7362C5D4E7E0011EF47 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		470BF7382C5D53100011EF47 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		47DBF70A2C5D8D7E003CEC02 /* FetchedObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
+		47DBF70B2C5D8D7F003CEC02 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		47DBF70E2C5D8DFA003CEC02 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
+		47DBF7102C5D8E0B003CEC02 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		47DBF7132C5D9446003CEC02 /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,11 @@
 				470BF7342C5D4E430011EF47 /* Home.swift */,
 				470BF7362C5D4E7E0011EF47 /* Menu.swift */,
 				470BF7382C5D53100011EF47 /* UserProfile.swift */,
+				47DBF70A2C5D8D7E003CEC02 /* FetchedObjects.swift */,
+				47DBF70B2C5D8D7F003CEC02 /* Persistence.swift */,
+				47DBF70E2C5D8DFA003CEC02 /* MenuList.swift */,
+				47DBF7102C5D8E0B003CEC02 /* MenuItem.swift */,
+				47DBF7122C5D9446003CEC02 /* ExampleDatabase.xcdatamodeld */,
 				470BF7282C5C36510011EF47 /* Assets.xcassets */,
 				470BF72A2C5C36510011EF47 /* Preview Content */,
 			);
@@ -148,7 +163,12 @@
 			files = (
 				470BF7332C5D21B10011EF47 /* Onboarding.swift in Sources */,
 				470BF7352C5D4E430011EF47 /* Home.swift in Sources */,
+				47DBF70F2C5D8DFA003CEC02 /* MenuList.swift in Sources */,
+				47DBF70C2C5D8D7F003CEC02 /* FetchedObjects.swift in Sources */,
+				47DBF70D2C5D8D7F003CEC02 /* Persistence.swift in Sources */,
+				47DBF7142C5D9446003CEC02 /* ExampleDatabase.xcdatamodeld in Sources */,
 				470BF7392C5D53100011EF47 /* UserProfile.swift in Sources */,
+				47DBF7112C5D8E0B003CEC02 /* MenuItem.swift in Sources */,
 				470BF7372C5D4E7E0011EF47 /* Menu.swift in Sources */,
 				470BF7252C5C364F0011EF47 /* Little_LemonApp.swift in Sources */,
 			);
@@ -349,6 +369,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		47DBF7122C5D9446003CEC02 /* ExampleDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				47DBF7132C5D9446003CEC02 /* ExampleDatabase.xcdatamodel */,
+			);
+			currentVersion = 47DBF7132C5D9446003CEC02 /* ExampleDatabase.xcdatamodel */;
+			path = ExampleDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 470BF7192C5C364F0011EF47 /* Project object */;
 }
