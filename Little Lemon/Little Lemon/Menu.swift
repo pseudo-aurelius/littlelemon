@@ -15,11 +15,18 @@ struct Menu: View {
     
     var body: some View {
         VStack() {
-            Text("Little Lemon")
-            Text("Chicago")
-            Text("Try our modern takes on some classic Mediterranean staples")
+            Header()
             
-            TextField("Search Our Menu", text: $searchText)
+            Hero()
+            
+            // PICK UP HERE...
+            HStack() {
+                Image(systemName: "magnifyingglass.circle.fill")
+                
+                TextField("Search Our Menu", text: $searchText)
+            }
+            
+
             
             FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
                 List() {

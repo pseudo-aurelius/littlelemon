@@ -24,20 +24,18 @@ struct Onboarding: View {
         NavigationView() {
             VStack {
                 
-                NavigationLink("", destination: Home(), isActive: $isLoggedIn).onAppear() {
-                    let loginStatus: String = UserDefaults.standard.string(forKey: keyLoggedIn) ?? "false"
-                    let alreadyLoggedOn: Bool = Bool(loginStatus) ?? false
-                    
-                    if (alreadyLoggedOn) {
-                        isLoggedIn = true;
-                    }
-                }
+                Image("Logo")
+                    .padding(.bottom)
+                    .padding(.top)
+                
+                Hero()
+                    .padding(.bottom, 15)
                 
                 VStack() {
-                    TextField("First Name", text: $firstName)
-                    TextField("Last Name", text: $lastName)
-                    TextField("Email", text: $email)
-                }.background(.green)
+                    ProfileDetail(label: "First Name*", userDetail: $firstName)
+                    ProfileDetail(label: "Last Name*", userDetail: $lastName)
+                    ProfileDetail(label: "Email*", userDetail: $email)
+                }
                 
                 Button("Register") {
                     if (!firstName.isEmpty && !lastName.isEmpty && !email.isEmpty) {
@@ -50,8 +48,21 @@ struct Onboarding: View {
                     } else {
                         // TO DO - Let the user know they need to fill out all forms
                     }
+                }.padding([.top, .bottom], 10).padding([.leading, .trailing], 140).foregroundColor(Color(hex: "#333333")).font(.custom("AlNile-Bold", size: 15))
+                    .background(Color(hex: "#F4CE14")).cornerRadius(8)
+                    .padding(.top, 15)
+                
+                Spacer()
+                
+                NavigationLink("", destination: Home(), isActive: $isLoggedIn).onAppear() {
+                    let loginStatus: String = UserDefaults.standard.string(forKey: keyLoggedIn) ?? "false"
+                    let alreadyLoggedOn: Bool = Bool(loginStatus) ?? false
+                    
+                    if (alreadyLoggedOn) {
+                        isLoggedIn = true;
+                    }
                 }
-            }
+            }.background(Color(hex: "#FBDABB"))
         }
     }
 }

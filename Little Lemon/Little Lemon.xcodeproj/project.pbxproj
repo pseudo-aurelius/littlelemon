@@ -19,6 +19,10 @@
 		47DBF70F2C5D8DFA003CEC02 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DBF70E2C5D8DFA003CEC02 /* MenuList.swift */; };
 		47DBF7112C5D8E0B003CEC02 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DBF7102C5D8E0B003CEC02 /* MenuItem.swift */; };
 		47DBF7142C5D9446003CEC02 /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47DBF7122C5D9446003CEC02 /* ExampleDatabase.xcdatamodeld */; };
+		47DF96EE2C5E725A00456244 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF96ED2C5E725A00456244 /* Header.swift */; };
+		47DF96F12C5E7BC700456244 /* HexColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF96F02C5E7BC700456244 /* HexColors.swift */; };
+		47DF96F32C5E805700456244 /* ProfileDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF96F22C5E805700456244 /* ProfileDetail.swift */; };
+		47DF96F52C5EB53F00456244 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF96F42C5EB53F00456244 /* Hero.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		47DBF70E2C5D8DFA003CEC02 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		47DBF7102C5D8E0B003CEC02 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		47DBF7132C5D9446003CEC02 /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
+		47DF96ED2C5E725A00456244 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		47DF96F02C5E7BC700456244 /* HexColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColors.swift; sourceTree = "<group>"; };
+		47DF96F22C5E805700456244 /* ProfileDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetail.swift; sourceTree = "<group>"; };
+		47DF96F42C5EB53F00456244 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,10 +80,14 @@
 				470BF7342C5D4E430011EF47 /* Home.swift */,
 				470BF7362C5D4E7E0011EF47 /* Menu.swift */,
 				470BF7382C5D53100011EF47 /* UserProfile.swift */,
+				47DF96F22C5E805700456244 /* ProfileDetail.swift */,
+				47DF96F42C5EB53F00456244 /* Hero.swift */,
+				47DF96ED2C5E725A00456244 /* Header.swift */,
 				47DBF70A2C5D8D7E003CEC02 /* FetchedObjects.swift */,
 				47DBF70B2C5D8D7F003CEC02 /* Persistence.swift */,
 				47DBF70E2C5D8DFA003CEC02 /* MenuList.swift */,
 				47DBF7102C5D8E0B003CEC02 /* MenuItem.swift */,
+				47DF96F02C5E7BC700456244 /* HexColors.swift */,
 				47DBF7122C5D9446003CEC02 /* ExampleDatabase.xcdatamodeld */,
 				470BF7282C5C36510011EF47 /* Assets.xcassets */,
 				470BF72A2C5C36510011EF47 /* Preview Content */,
@@ -162,13 +174,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				470BF7332C5D21B10011EF47 /* Onboarding.swift in Sources */,
+				47DF96F12C5E7BC700456244 /* HexColors.swift in Sources */,
+				47DF96F32C5E805700456244 /* ProfileDetail.swift in Sources */,
 				470BF7352C5D4E430011EF47 /* Home.swift in Sources */,
 				47DBF70F2C5D8DFA003CEC02 /* MenuList.swift in Sources */,
 				47DBF70C2C5D8D7F003CEC02 /* FetchedObjects.swift in Sources */,
 				47DBF70D2C5D8D7F003CEC02 /* Persistence.swift in Sources */,
+				47DF96EE2C5E725A00456244 /* Header.swift in Sources */,
 				47DBF7142C5D9446003CEC02 /* ExampleDatabase.xcdatamodeld in Sources */,
 				470BF7392C5D53100011EF47 /* UserProfile.swift in Sources */,
 				47DBF7112C5D8E0B003CEC02 /* MenuItem.swift in Sources */,
+				47DF96F52C5EB53F00456244 /* Hero.swift in Sources */,
 				470BF7372C5D4E7E0011EF47 /* Menu.swift in Sources */,
 				470BF7252C5C364F0011EF47 /* Little_LemonApp.swift in Sources */,
 			);
