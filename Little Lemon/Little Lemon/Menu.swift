@@ -11,13 +11,17 @@ import CoreData
 struct Menu: View {
     @Environment(\.managedObjectContext) private var viewContext
     
+    @State var searchText: String = ""
+    
     var body: some View {
         VStack() {
             Text("Little Lemon")
             Text("Chicago")
             Text("Try our modern takes on some classic Mediterranean staples")
             
-            FetchedObjects() { (dishes: [Dish]) in
+            TextField("Search Our Menu", text: $searchText)
+            
+            FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
                 List() {
                     ForEach(dishes, content: {dish in
                         HStack() {
@@ -61,6 +65,18 @@ struct Menu: View {
         }
         
         menuTask.resume();
+    }
+    
+    func buildSortDescriptors() -> [NSSortDescriptor] {
+        return [NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedStandardCompare))]
+    }
+    
+    func buildPredicate() -> NSPredicate {
+        if (searchText.isEmpty) {
+            return NSPredicate(value: true)
+        } else {
+            return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
+        }
     }
 }
 
