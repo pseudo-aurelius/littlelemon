@@ -18,25 +18,78 @@ struct Menu: View {
             Header()
             
             Hero()
+                .padding(.bottom, -10)
             
-            // PICK UP HERE...
             HStack() {
                 Image(systemName: "magnifyingglass.circle.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20, height: 20)
                 
-                TextField("Search Our Menu", text: $searchText)
-            }
-            
+                TextField("", text: $searchText, prompt: Text("Explore Our Menu").foregroundColor(.black))
+                    
 
+            }.padding(5).border(Color(hex: "FFFFF"), width: 2 ).cornerRadius(4).padding(15).background(Color(hex: "#495E57"))
+            
+            VStack() {
+                Text("ORDER FOR DELIVERY")
+                    .font(.custom("AlNile-Bold", size: 16))
+                    .foregroundColor(Color(hex: "#FFFFF"))
+                
+                HStack() {
+                    Button("Starters") {
+                        
+                    }.padding(10).foregroundColor(Color(hex: "#71807B")).font(.custom("AlNile-Bold", size: 15)).background(Color(hex: "#AFAFAF")).cornerRadius(12)
+                    
+                    Button("Mains") {
+                        
+                    }.padding(10).foregroundColor(Color(hex: "#71807B")).font(.custom("AlNile-Bold", size: 15)).background(Color(hex: "#AFAFAF")).cornerRadius(12)
+                    
+                    Button("Desserts") {
+                        
+                    }.padding(10).foregroundColor(Color(hex: "#71807B")).font(.custom("AlNile-Bold", size: 15)).background(Color(hex: "#AFAFAF")).cornerRadius(12)
+                    
+                    Button("Drinks") {
+                        
+                    }.padding(10).foregroundColor(Color(hex: "#71807B")).font(.custom("AlNile-Bold", size: 15)).background(Color(hex: "#AFAFAF")).cornerRadius(12)
+                }.padding(.top, -10)
+            }.padding(.bottom, 10)
+             
+            Divider()
+                .padding(.top, 15)
             
             FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
                 List() {
                     ForEach(dishes, content: {dish in
                         HStack() {
-                            Text(dish.title!)
-                            // TO DO - RESIZE THESE AsyncImage(url: URL(string: dish.image!))
+                            VStack(alignment: .leading) {
+                                Text(dish.title!)
+                                    .font(.custom("AlNile-Bold", size: 16))
+                                    .foregroundColor(Color(hex: "#FFFFF"))
+                                
+                                Text(dish.desc!)
+                                    .lineLimit(2)
+                                    .font(.custom("AlNile", size: 14))
+                                    .foregroundColor(Color(hex: "#FFFFF"))
+                                    .padding(.top, 1)
+                                    .padding(.bottom, 1)
+                                
+                                Text("$" + dish.price!)
+                                    .font(.custom("AlNile", size: 20))
+                                    .foregroundColor(Color(hex: "#333333"))
+                            }
+                            
+                            Spacer()
+ 
+                           AsyncImage(url: URL(string: dish.image!)) { image in
+                               image.resizable()
+                           } placeholder: {
+                               ProgressView()
+                           }
+                           .frame(width: 100, height: 100)
                         }
                     })
-                }
+                }.scrollContentBackground(.hidden)
             }
         }.onAppear() {
             getMenuData()
@@ -64,6 +117,7 @@ struct Menu: View {
                         dish.title = menuItem.title
                         dish.price = menuItem.price
                         dish.image = menuItem.image
+                        dish.desc = menuItem.description
                         
                         try? viewContext.save();
                     }
